@@ -17,20 +17,6 @@
 </head>
 
 <body>
-    <div class="container" id="content">
-        <h2 class="text-center my-4">Daftar Stand</h2>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Pertama</span></a>
-            </li>
-            <li class="list-group-item">
-                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Kedua</span></a>
-            </li>
-            <li class="list-group-item">
-                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Ketiga</span></a>
-            </li>
-        </ul>
-    </div>
     <div class="text-right fixed-bottom" id="button-plus">
         <a class="text-decoration-none" href="stand_dashboard.php"><i class="icon-plus"></i></a>
     </div>
@@ -41,6 +27,7 @@
             <a class="nav-link" href="#">Peta</a>
         </div>
     </nav>
+    
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
             <a href="index.php"><img class="img-fluid" src="assets/img/Logo%20exfest.png" width="100"></a>
@@ -56,6 +43,22 @@
             <a class="nav-link btn btn-outline-secondary" href="#">Logout</a>
         </div>
     </nav>
+
+    <div class="container" id="content">
+        <h2 class="text-center my-4">Daftar Stand</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Pertama</span></a>
+            </li>
+            <li class="list-group-item">
+                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Kedua</span></a>
+            </li>
+            <li class="list-group-item">
+                <a class="text-decoration-none" href="stand_dashboard.php"><span>Stand Ketiga</span></a>
+            </li>
+        </ul>
+    </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>

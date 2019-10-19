@@ -37,7 +37,7 @@
                         <a class="nav-link" href="#">Peta</a>
                     </li>
                 </ul>
-        </div>
+           </div>
         </div>
     </nav>
 

@@ -29,10 +29,11 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"></li>
                 </ul>
-        </div>
+            </div>
             <a class="nav-link btn btn-outline-secondary" href="#">Logout</a>
         </div>
     </nav>
+
     <div class="container" id="content">
         <h2 class="text-center">Stand</h2>
         <form>
@@ -76,9 +77,11 @@
             </div>
         </form>
     </div>
+
     <nav class="navbar navbar-light navbar-expand-md" id="nav-footer">
         <div class="container-fluid"><a class="nav-link" href="stand.html">Dashboard</a><a class="nav-link" href="#">Peta</a></div>
     </nav>
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>

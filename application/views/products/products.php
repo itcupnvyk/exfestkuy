@@ -37,8 +37,10 @@
                         <a class="nav-link" href="#">Peta</a>
                     </li>
                 </ul>
-        </div>
-        <div class="text-right" id="button-search"><a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a></div>
+            </div>
+            <div class="text-right" id="button-search">
+                <a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a>
+            </div>
         </div>
     </nav>
 

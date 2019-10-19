@@ -37,10 +37,10 @@
                         <a class="nav-link" href="#">Peta</a>
                     </li>
                 </ul>
-        </div>
-        <div class="text-right" id="button-search">
-            <a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a>
-        </div>
+            </div>
+            <div class="text-right" id="button-search">
+                <a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a>
+            </div>
         </div>
     </nav>
 
@@ -151,6 +151,7 @@
             </div>
         </div>
     </div>
+    
     <div class="footer-basic pt-1 pb-4">
         <footer class="mb-5">
             <p class="copyright">Powered by ANTHE and POSPERO</p>

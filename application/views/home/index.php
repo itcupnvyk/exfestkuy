@@ -37,9 +37,10 @@
                         <a class="nav-link" href="#">Peta</a>
                     </li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
+
     <div>
         <div class="container">
             <div class="jumbotron">
@@ -94,6 +95,7 @@
             <p class="copyright">Powered by ANTHE and POSPERO</p>
         </footer>
     </div>
+
     <nav class="navbar navbar-light navbar-expand-md" id="nav-footer">
         <div class="container-fluid">
             <a class="nav-link" href="stand.php">Stand</a>
@@ -101,6 +103,8 @@
             <a class="nav-link" href="#">Peta</a>
         </div>
     </nav>
+
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
