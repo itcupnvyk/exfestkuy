@@ -1,0 +1,56 @@
+.jumbotron {
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar.navbar-light.navbar-expand-md.fixed-top {
+  background-color: white;
+}
+
+.icon-plus {
+  font-size: 50px;
+}
+
+#content {
+  margin-top: 70px;
+}
+
+#button-plus {
+  margin: 60px 30px;
+}
+
+.fas.fa-search {
+  font-size: 25px;
+  padding: 0.3em 0.3em;
+}
+
+@media (max-width: 576px) {
+  #nav-footer {
+    display: block !important;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid rgba(159,161,172,0.1);
+  }
+}
+
+#nav-footer {
+  display: none;
+}
+
+@media (min-width: 300px) {
+  .navbar-light .navbar-toggler {
+    display: none;
+  }
+}
+
+#nav-footer a {
+  color: rgb(159,161,172);
+}
+
