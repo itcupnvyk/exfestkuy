@@ -2,6 +2,7 @@ SHELL:=/bin/bash
 
 migrate: 
 	@php index.php migration migrate
+
 migration:
 ifdef name
 	@php index.php migration create $(name)
