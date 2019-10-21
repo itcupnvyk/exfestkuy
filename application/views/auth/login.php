@@ -11,7 +11,7 @@
                 <button class="btn btn-primary btn-block" type="submit">Log In</button>
                 <a class="btn btn-dark btn-block" href="index.html">Home</a>
             </div>
-            <a class="forgot" href="#">Forgot your email or password?</a>
+            <a class="forgot" href="<?= base_url('auth/forgotpassword'); ?>">Forgot your password?</a>
             <a class="forgot" href="<?= base_url('auth/registration'); ?>">Didn't have an acount?</a>
         </form>
     </div>
