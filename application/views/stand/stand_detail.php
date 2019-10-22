@@ -1,7 +1,7 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="index.html">
-                <img class="img-fluid" src="assets/img/Logo%20exfest.png" width="100">
+            <a href="<?= base_url('home'); ?>">
+                <img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100">
             </a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -10,13 +10,13 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="stand.html">Stand</a>
+                        <a class="nav-link" href="<?= base_url('stand'); ?>">Stand</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="#">Produk</a>
+                        <a class="nav-link active" href="<?= base_url('product'); ?>">Produk</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">Peta</a>
+                        <a class="nav-link" href="<?= base_url('map'); ?>">Peta</a>
                     </li>
                 </ul>
             </div>

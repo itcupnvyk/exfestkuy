@@ -1,6 +1,6 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="index.html"><img class="img-fluid" src="assets/img/Logo%20exfest.png" width="100"></a>
+            <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>

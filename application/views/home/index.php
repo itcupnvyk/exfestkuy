@@ -1,6 +1,6 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="index.php"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
+            <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
@@ -9,13 +9,13 @@
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="stand.php">Stand</a>
+                        <a class="nav-link" href="<?= base_url('stand'); ?>">Stand</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="product.php">Produk</a>
+                        <a class="nav-link" href="<?= base_url('product'); ?>">Produk</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">Peta</a>
+                        <a class="nav-link" href="<?= base_url('map'); ?>">Peta</a>
                     </li>
                 </ul>
             </div>
@@ -76,11 +76,3 @@
             <p class="copyright">Powered by ANTHE and POSPERO</p>
         </footer>
     </div>
-
-    <nav class="navbar navbar-light navbar-expand-md" id="nav-footer">
-        <div class="container-fluid">
-            <a class="nav-link" href="stand.php">Stand</a>
-            <a class="nav-link" href="product.php">Produk</a>
-            <a class="nav-link" href="#">Peta</a>
-        </div>
-    </nav>
