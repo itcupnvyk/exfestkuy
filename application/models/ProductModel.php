@@ -2,22 +2,22 @@
 
 class ProductModel extends CI_Model {
 
-    public function create($user) {
+    public function create($product) {
         $now = date('Y-m-d H:i:s');
         $user['created_at'] = $now;
         $user['updated_at'] = $now;
 
-        if(!$this->db->insert('products', $user)) {
+        if(!$this->db->insert('products', $product)) {
             return $this->db->error();
         }
         return null;
     }
 
-    public function update($user) {
+    public function update($product) {
         $now = date('Y-m-d H:i:s');
         $user['updated_at'] = $now;
 
-        if(!$this->db->update('products', $user, array('id' => $user['id']))) {
+        if(!$this->db->update('products', $product, array('id' => $product['id']))) {
             return $this->db->error();
         }
         return null;
@@ -34,15 +34,7 @@ class ProductModel extends CI_Model {
         return $this->db->get_where('products', array('id' => $id))->row_array();
     }
 
-    public function findByEmail($email) {
-        return $this->db->get_where('products', array('email' => $email))->row_array();
-    }
-
-    public function authenticate($email, $password) {
-        $user = $this->findByEmail($email);
-        if(!$user) {
-            return false;
-        }
-        return password_verify($password, $user['password']);
+    public function findAll() {
+        return $this->db->get('products')->row_array();
     }
 }
