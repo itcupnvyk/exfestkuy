@@ -1,6 +1,6 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="index.php"><img class="img-fluid" src="assets/img/Logo%20exfest.png" width="100"></a>
+            <a href="index.php"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
@@ -26,27 +26,27 @@
         <div class="container">
             <div class="jumbotron">
                 <div class="text-center">
-                    <img class="img-fluid text-center" src="assets/img/Logo%20exfest.png" width="200">
+                    <img class="img-fluid text-center" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="200">
                 </div>
                 <h4 class="text-center mt-3">Temukan stand dan produk disini</h4>
             </div>
             <div class="mt-5">
                 <div class="row">
                     <div class="col-md-3 offset-md-1 mb-5">
-                        <a class="text-decoration-none" href="stand.php">
+                        <a class="text-decoration-none" href="<?= base_url('home/stand'); ?>">
                             <div class="card">
                                 <div class="card-body">
-                                    <img class="img-fluid" src="assets/img/undraw_business_shop_qw5t.png">
+                                    <img class="img-fluid" src="<?= base_url('assets/img/undraw_business_shop_qw5t.png'); ?>">
                                     <h4 class="text-center text-dark card-title text-decoration-none">stand</h4>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 offset-md-1 mb-5">
-                        <a href="product.php">
+                        <a href="<?= base_url('home/product'); ?>">
                             <div class="card">
                                 <div class="card-body">
-                                    <img class="img-fluid" src="assets/img/undraw_movie_night_93wl.png">
+                                    <img class="img-fluid" src="<?= base_url('assets/img/undraw_movie_night_93wl.png'); ?>">
                                     <h4 class="text-center text-dark card-title text-decoration-none">produk</h4>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                         <a href="#">
                             <div class="card">
                                 <div class="card-body">
-                                    <img class="img-fluid" src="assets/img/undraw_Map_dark_k9pw.png">
+                                    <img class="img-fluid" src="<?= base_url('assets/img/undraw_Map_dark_k9pw.png'); ?>">
                                     <h4 class="text-center text-dark card-title text-decoration-none">peta stand</h4>
                                 </div>
                             </div>
