@@ -39,6 +39,10 @@ class UserModel extends CI_Model {
         return $this->db->get_where('users', array('email' => $email))->row_array();
     }
 
+    public function findAll() {
+        return $this->db->get('users')->row_array();
+    }
+
     public function authenticate($email, $password) {
         $user = $this->findByEmail($email);
         if(!$user) {
