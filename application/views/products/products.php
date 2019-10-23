@@ -27,17 +27,17 @@
 
     <div class="container" id="content">
         <h2 class="text-center my-4">Daftar Produk</h2>
-        <!-- foreach for looping products-->
-        <a href="#">
+        <?php foreach ($products as $product): ?>
+        <a href="<?= base_url('product/product_detail/') . $product['product_id']; ?>">
             <div class="card mt-2 bg-light">
                 <div class="card-body">
-                    <h4 class="card-title">Roti Maryam</h4>
-                    <h6 class="text-muted card-subtitle mb-2">Rp. 10,000</h6>
-                    <h6 class="text-muted card-subtitle mb-2">Maryam SpaceX</h6>
+                    <h4 class="card-title"><?= $product['product_name']; ?></h4>
+                    <h6 class="text-muted card-subtitle mb-2"><?= $product['price']; ?></h6>
+                    <h6 class="text-muted card-subtitle mb-2"><?= $product['user_name']; ?></h6>
                 </div>
             </div>
         </a>
-        <!-- endforeach -->
+        <?php endforeach; ?>
     </div>
 
     <nav class="mt-3">

@@ -33,7 +33,7 @@
             <div class="mt-5">
                 <div class="row">
                     <div class="col-md-3 offset-md-1 mb-5">
-                        <a class="text-decoration-none" href="<?= base_url('home/stand'); ?>">
+                        <a class="text-decoration-none" href="<?= base_url('stand'); ?>">
                             <div class="card">
                                 <div class="card-body">
                                     <img class="img-fluid" src="<?= base_url('assets/img/undraw_business_shop_qw5t.png'); ?>">
@@ -43,7 +43,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 offset-md-1 mb-5">
-                        <a href="<?= base_url('home/product'); ?>">
+                        <a href="<?= base_url('product'); ?>">
                             <div class="card">
                                 <div class="card-body">
                                     <img class="img-fluid" src="<?= base_url('assets/img/undraw_movie_night_93wl.png'); ?>">
@@ -53,7 +53,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 offset-md-1 mb-5">
-                        <a href="#">
+                        <a href="<?= base_url('map'); ?>">
                             <div class="card">
                                 <div class="card-body">
                                     <img class="img-fluid" src="<?= base_url('assets/img/undraw_Map_dark_k9pw.png'); ?>">
