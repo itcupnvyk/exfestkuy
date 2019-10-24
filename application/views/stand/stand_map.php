@@ -23,20 +23,21 @@
     </nav>
 
     <div class="container" id="content">
-        <h2 class="text-center my-4">ANTHE</h2>
+        <h2 class="text-center my-4"><?= $user['name']; ?></h2>
         <div class="card mt-2 bg-light">
             <div class="card-body">
                 <h4 class="card-title">Produk</h4>
-                <h6 class="text-muted card-subtitle mb-2">Onion Ring</h6>
-                <h6 class="text-muted card-subtitle mb-2">Roti Maryam</h6>
-                <h6 class="text-muted card-subtitle mb-2">Tropical Ice Cube</h6>
+                <hr>
+                <?php foreach ($products as $product): ?>
+                <h6 class="text-muted card-subtitle mb-2"><?= $product['product_name']; ?></h6>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="card mt-2 bg-light">
             <div class="card-body">
                 <h4 class="card-title">Letak Stand</h4>
-                <a class="card-link" href="<?= base_url('assets/img/Exfeskuy_Denah1.jpg'); ?>" data-lightbox="maps" target="_blank">
-                <img class="img-fluid" src="<?= base_url('assets/img/Exfeskuy_Denah1.jpg'); ?>">
+                <a class="card-link" href="<?= base_url('assets/img/') . $position['map_url']; ?>" data-lightbox="maps" target="_blank">
+                <img class="img-fluid" src="<?= base_url('assets/img/') . $position['map_url']; ?>">
             </a>
             </div>
         </div>
