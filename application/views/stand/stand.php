@@ -1,3 +1,4 @@
+    
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
             <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
@@ -27,76 +28,15 @@
 
     <div class="container" id="content">
         <h2 class="text-center my-4">Daftar Stand</h2>
-        <a href="stand_detail.php">
+        <?php foreach($users as $user): ?>
+        <a href="<?= base_url('stand/detail/') . $user['id']; ?>">
             <div class="card mt-2 bg-light">
                 <div class="card-body">
-                    <h4 class="card-title">Stand pertama</h4>
+                    <h4 class="card-title"><?= $user['name']; ?></h4>
                 </div>
             </div>
         </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand kedua</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand ketiga</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand keempat</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand kelima</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand keenam</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand ketujuh</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand kedelapan</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand kesembilan</h4>
-                </div>
-            </div>
-        </a>
-        <a href="stand_detail.php">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title">Stand kesepuluh</h4>
-                </div>
-            </div>
-        </a>
+        <?php endforeach; ?>
     </div>
 
     <nav class="mt-3">

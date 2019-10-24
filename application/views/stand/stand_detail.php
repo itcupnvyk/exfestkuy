@@ -29,30 +29,20 @@
     </nav>
 
     <div class="container" id="content">
-        <h2 class="text-center my-4">Maryam SpaceX</h2>
+        <h2 class="text-center my-4"><?= $user['name']; ?></h2>
+        <?php foreach ($products as $product): ?>
         <div class="card mt-2 bg-light">
             <div class="card-body">
-                <h4 class="card-title">Roti Maryam</h4>
-                <h6 class="text-muted card-subtitle mb-2">Rp. 10,000</h6>
-                <h6 class="text-muted card-subtitle mb-2">Maryam SpaceX</h6>
+                <h4 class="card-title"><?= $product['product_name']; ?></h4>
+                <h6 class="text-muted card-subtitle mb-2"><?= $product['price']; ?></h6>
+                <h6 class="text-muted card-subtitle mb-2"><?= $user['name']; ?></h6>
             </div>
         </div>
-        <div class="card mt-2 bg-light">
-            <div class="card-body">
-                <h4 class="card-title">Roti Maryam</h4>
-                <h6 class="text-muted card-subtitle mb-2">Rp. 10,000</h6>
-                <h6 class="text-muted card-subtitle mb-2">Maryam SpaceX</h6>
-            </div>
-        </div>
-        <div class="card mt-2 bg-light">
-            <div class="card-body">
-                <h4 class="card-title">Onion Rings</h4>
-                <h6 class="text-muted card-subtitle mb-2">Rp. 5,000</h6>
-                <h6 class="text-muted card-subtitle mb-2">Maryam SpaceX</h6>
-            </div>
-        </div>
+        <?php endforeach; ?>
         <div class="row">
-            <div class="col text-center"><a class="btn btn-outline-primary my-3" href="stand_map.html">Lihat Posisi Stand</a></div>
+            <div class="col text-center">
+                <a class="btn btn-outline-primary my-3" href="<?= base_url('stand/map/') . $user['id']; ?>">Lihat Posisi Stand</a>
+            </div>
         </div>
     </div>
 

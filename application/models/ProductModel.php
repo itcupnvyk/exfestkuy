@@ -34,6 +34,14 @@ class ProductModel extends CI_Model {
         return $this->db->get_where('products', array('id' => $id))->row_array();
     }
 
+    public function findByUserID($user_id) {
+        $this->db->select('products.name as product_name, price')
+                 ->from('products')
+                 ->join('users', 'users.id = products.user_id');
+
+        return $this->db->get()->result_array();
+    }
+
     public function findAll() {
         $this->db->select('products.id as product_id, 
                             products.name as product_name, 
@@ -42,6 +50,7 @@ class ProductModel extends CI_Model {
                             price')
                  ->from('products')
                  ->join('users', 'users.id = products.user_id');
+                 
         return $this->db->get()->result_array();
     }
 }

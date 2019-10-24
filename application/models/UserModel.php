@@ -40,7 +40,7 @@ class UserModel extends CI_Model {
     }
 
     public function findAll() {
-        return $this->db->get('users')->row_array();
+        return $this->db->get('users')->result_array();
     }
 
     public function authenticate($email, $password) {
