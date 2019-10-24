@@ -1,6 +1,6 @@
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="assets/img/Logo%20exfest.png" width="100"></a>
+            <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
@@ -18,14 +18,16 @@
                         <a class="nav-link active" href="<?= base_url('map'); ?>">Peta</a>
                     </li>
                 </ul>
-        </div>
-        <div class="text-right" id="button-search"><a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a></div>
+            </div>
+            <div class="text-right" id="button-search">
+                <a class="text-decoration-none" href="#"><i class="fas fa-search" data-toggle="modal" data-target="#modal-search"></i></a>
+            </div>
         </div>
     </nav>
 
     <div class="container" id="content">
         <h2 class="text-center my-4">Peta Stand</h2>
-        <img class="img-fluid" src="assets/img/Exfeskuy_Denah1.jpg">
+        <img class="img-fluid" src="<?= base_url('assets/img/Exfeskuy_Denah.jpg'); ?>">
     </div>
 
     <div class="footer-basic pt-1 pb-4">
