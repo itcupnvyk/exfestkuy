@@ -38,9 +38,10 @@ class ProductModel extends CI_Model {
         $this->db->select('products.id as product_id, 
                             products.name as product_name, 
                             users.name as user_name, 
-                            price');
-        $this->db->from('products');
-        $this->db->join('users', 'users.id = products.user_id');
+                            users.id as user_id,
+                            price')
+                 ->from('products')
+                 ->join('users', 'users.id = products.user_id');
         return $this->db->get()->result_array();
     }
 }

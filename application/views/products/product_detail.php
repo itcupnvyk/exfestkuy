@@ -1,4 +1,4 @@
-
+    <?php print_r($product); ?>
     <nav class="navbar navbar-light navbar-expand-md fixed-top">
         <div class="container-fluid">
             <a href="<?= base_url('home'); ?>"><img class="img-fluid" src="<?= base_url('assets/img/Logo%20exfest.png'); ?>" width="100"></a>
@@ -21,13 +21,13 @@
     </nav>
 
     <div class="container" id="content">
-        <h2 class="text-center my-4">Roti Maryam</h2>
+        <h2 class="text-center my-4"><?= $product['name']; ?></h2>
         <div class="card mt-2 bg-light">
             <div class="card-body">
-                <h3 class="text-muted card-subtitle mb-2">Rp. 10,000</h3>
+                <h3 class="text-muted card-subtitle mb-2">Rp. <?= $product['price']; ?></h3>
                 <a class="card-link" href="#">
-                    <h4 class="text-muted mb-4">Produk stand: Maryam SpaceX</h4>
-                </a><img class="img-fluid" src="assets/img/Exfeskuy_Denah1.jpg"></div>
+                    <h4 class="text-muted mb-4">Produk stand: <?= $user['name']; ?></h4>
+                </a><img class="img-fluid" src="<?= base_url('assets/img/') . $user['map_url']; ?>"></div>
         </div>
     </div>
 
