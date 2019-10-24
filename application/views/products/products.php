@@ -28,7 +28,7 @@
     <div class="container" id="content">
         <h2 class="text-center my-4">Daftar Produk</h2>
         <?php foreach ($products as $product): ?>
-        <a href="<?= base_url('product/product_detail/') . $product['product_id']; ?>">
+        <a href="<?= base_url('product/product_detail/') . $product['user_id'] . '/' . $product['product_id']; ?>">
             <div class="card mt-2 bg-light">
                 <div class="card-body">
                     <h4 class="card-title"><?= $product['product_name']; ?></h4>

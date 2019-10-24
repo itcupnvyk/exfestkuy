@@ -50,4 +50,12 @@ class UserModel extends CI_Model {
         }
         return password_verify($password, $user['password']);
     }
+
+    public function findStandPosition($id) {
+        $this->db->select('name, map_url')
+                 ->from('users')
+                 ->where('id', $id);
+                 
+        return $this->db->get()->row_array();
+    }
 }
