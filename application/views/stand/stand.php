@@ -39,17 +39,11 @@
         <?php endforeach; ?>
     </div>
 
-    <nav class="mt-3">
-        <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-        </ul>
-    </nav>
+    <div class="row mt-3">
+        <div class="col">
+            <?php echo $pagination; ?>
+        </div>
+    </div>
 
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-search">
         <div class="modal-dialog" role="document">

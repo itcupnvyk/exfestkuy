@@ -39,8 +39,8 @@ class UserModel extends CI_Model {
         return $this->db->get_where('users', array('email' => $email))->row_array();
     }
 
-    public function findAll() {
-        return $this->db->get('users')->result_array();
+    public function findAll($limit, $offset) {
+        return $this->db->get('users', $limit, $offset)->result_array();
     }
 
     public function authenticate($email, $password) {
@@ -57,5 +57,9 @@ class UserModel extends CI_Model {
                  ->where('id', $id);
                  
         return $this->db->get()->row_array();
+    }
+
+    public function count() {
+        return $this->db->get('users')->num_rows();
     }
 }
