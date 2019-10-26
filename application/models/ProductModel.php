@@ -56,4 +56,15 @@ class ProductModel extends CI_Model {
     public function count() {
         return $this->db->get('products')->num_rows();
     }
+
+    public function search($query) {
+        $this->db->select('products.id as product_id, 
+                            products.name as product_name, 
+                            users.name as user_name, 
+                            users.id as user_id,
+                            price')
+                  ->join('users', 'users.id = products.user_id')
+                  ->like('LOWER(products.name)', strtolower($query));
+        return $this->db->get('products')->result_array();
+    }
 }

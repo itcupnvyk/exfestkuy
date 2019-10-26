@@ -40,11 +40,13 @@
         <?php endforeach; ?>
     </div>
 
+    <?php if($pagination): ?>
     <div class="row mt-3">
         <div class="col">
             <?php echo $pagination; ?>
         </div>
     </div>
+    <?php endif ?>
 
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-search">
         <div class="modal-dialog" role="document">
@@ -56,13 +58,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="search-input" placeholder="ketik disini">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Batal</button>
-                    <button class="btn btn-primary" type="button">Cari</button>
+                    <form class="form-group" action="<?= base_url('product') . '/search'; ?>" method="post">
+                        <div class="row">
+                            <div class="col-10">
+                                <input type="text" class="form-control" name="search-input" placeholder="ketik disini">
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-primary" type="submit">Cari</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

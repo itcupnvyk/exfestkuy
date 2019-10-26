@@ -62,4 +62,10 @@ class UserModel extends CI_Model {
     public function count() {
         return $this->db->get('users')->num_rows();
     }
+
+    public function search($query) {
+        $this->db->select('*')
+                  ->like('LOWER(users.name)', strtolower($query));
+        return $this->db->get('users')->result_array();
+    }
 }
