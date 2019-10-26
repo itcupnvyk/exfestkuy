@@ -23,7 +23,7 @@
         <a href="#">
             <div class="card mt-2 bg-light">
                 <div class="card-body">
-                    <h4 class="card-title"><?= $product['name']; ?></h4>
+                    <h4 class="card-title"><?= $product['product_name']; ?></h4>
                     <h6 class="text-muted card-subtitle mb-2">Rp. <?= $product['price']; ?></h6>
                 </div>
             </div>
