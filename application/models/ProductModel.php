@@ -4,8 +4,8 @@ class ProductModel extends CI_Model {
 
     public function create($product) {
         $now = date('Y-m-d H:i:s');
-        $user['created_at'] = $now;
-        $user['updated_at'] = $now;
+        $product['created_at'] = $now;
+        $product['updated_at'] = $now;
 
         if(!$this->db->insert('products', $product)) {
             return $this->db->error();
