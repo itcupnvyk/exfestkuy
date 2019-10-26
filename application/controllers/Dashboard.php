@@ -70,7 +70,7 @@ class Dashboard extends CI_Controller {
         $user = array(
             'id'        => $id_stand,
             'name'      => $name,
-            'map_url'   => base_url('assets/img/') . $map_url . '.jpg'
+            'map_url'   => $map_url . '.jpg'
         );
         
         $this->UserModel->update($user);
