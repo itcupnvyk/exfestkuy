@@ -24,7 +24,9 @@
         <h2 class="text-center my-4"><?= $product['name']; ?></h2>
         <div class="card mt-2 bg-light">
             <div class="card-body">
-                <h3 class="text-muted card-subtitle mb-2">Rp. <?= $product['price']; ?></h3>
+                <?php if ($product['price'] != 0): ?>
+                <h6 class="text-muted card-subtitle mb-2">Rp. <?= $product['price']; ?></h6>
+                <?php endif; ?>
                 <a class="card-link" href="#">
                     <h4 class="text-muted mb-4">Produk stand: <?= $user['name']; ?></h4>
                 </a><img class="img-fluid" src="<?= base_url('assets/img/') . $user['map_url']; ?>"></div>
