@@ -121,7 +121,7 @@ class Dashboard extends CI_Controller {
             'user_id'       => $user_id
         );
 
-        $this->ProductModel->create($product);
+        $this->ProductModel->create($products);
         redirect('dashboard');
     }
 
