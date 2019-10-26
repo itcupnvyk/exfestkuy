@@ -29,13 +29,15 @@
     <div class="container" id="content">
         <h2 class="text-center my-4">Daftar Stand</h2>
         <?php foreach($users as $user): ?>
-        <a href="<?= base_url('stand/detail/') . $user['id']; ?>">
-            <div class="card mt-2 bg-light">
-                <div class="card-body">
-                    <h4 class="card-title"><?= $user['name']; ?></h4>
+            <?php if ($user['role_id'] == 2): ?>
+            <a href="<?= base_url('stand/detail/') . $user['id']; ?>">
+                <div class="card mt-2 bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title"><?= $user['name']; ?></h4>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 
