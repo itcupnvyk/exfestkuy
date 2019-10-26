@@ -25,6 +25,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><?= $product['product_name']; ?></h4>
                     <h6 class="text-muted card-subtitle mb-2">Rp. <?= $product['price']; ?></h6>
+                    <a class="btn btn-danger" href="<?= base_url('dashboard/deleteproduct/') . $product['product_id']; ?>">Hapus</a>
                 </div>
             </div>
         </a>
