@@ -43,6 +43,10 @@ class UserModel extends CI_Model {
         return $this->db->get('users', $limit, $offset)->result_array();
     }
 
+    public function findAllWithoutLimit() {
+        return $this->db->get('users')->result_array();
+    }
+
     public function authenticate($email, $password) {
         $user = $this->findByEmail($email);
         if(!$user) {

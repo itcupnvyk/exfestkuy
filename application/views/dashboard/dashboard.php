@@ -11,7 +11,7 @@
                     <li class="nav-item" role="presentation"></li>
                 </ul>
             </div>
-            <a class="nav-link btn btn-outline-secondary" href="#">Logout</a>
+            <a class="nav-link btn btn-outline-secondary" href="<?= base_url('auth/logout'); ?>">Logout</a>
         </div>
     </nav>
 

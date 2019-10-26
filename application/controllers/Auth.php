@@ -22,9 +22,20 @@ class Auth extends CI_Controller {
     public function login() {
         $email      = $this->input->post('email');
         $password   = $this->input->post('password');
-
-        $this->UserModel->authenticate($email, $password);
-        // redirect to dashboard
+        
+        if($this->UserModel->authenticate($email, $password)) {
+            $user = $this->UserModel->findByEmail($email);
+            $userdata   = array(
+                'email'     => $email,
+                'role_id'   => $user['role_id'],
+                'logged_in' => TRUE
+            );
+            
+            $this->session->set_userdata($userdata);
+            redirect('dashboard');
+        } else {
+            redirect('auth');
+        }
     }
 
     public function registration() {
@@ -106,5 +117,11 @@ class Auth extends CI_Controller {
             $this->UserModel->update($user);
             redirect('auth');
         }
+    }
+
+    public function logout() {
+        $data = array('role_id', 'email');
+        $this->session->unset_userdata($data);
+        redirect('home');
     }
 }

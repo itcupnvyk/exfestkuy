@@ -11,15 +11,19 @@ class Dashboard extends CI_Controller {
     }
 
     public function index() {
-        $data = array(
-            'title'     => 'Dashboard',
-            'users'     => $this->UserModel->findAll()
-        );
+        if($this->session->userdata('role_id') == 1) {
+            $data = array(
+                'title'     => 'Dashboard',
+                'users'     => $this->UserModel->findAllWithoutLimit()
+            );
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('dashboard/dashboard', $data);
-        $this->load->view('templates/footer_navbar');
-        $this->load->view('templates/footer');
+            $this->load->view('templates/header', $data);
+            $this->load->view('dashboard/dashboard', $data);
+            $this->load->view('templates/footer_navbar');
+            $this->load->view('templates/footer');
+        } else {
+            redirect('home');
+        }
     }
 
     public function addStand() {
