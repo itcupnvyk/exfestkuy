@@ -35,10 +35,12 @@ class ProductModel extends CI_Model {
     }
 
     public function findByUserID($user_id) {
-        $this->db->select('products.name as product_name, price')
+        $this->db->select('products.id as product_id, 
+                            products.name as product_name, 
+                            price')
                  ->from('products')
-                 ->join('users', 'users.id = products.user_id');
-
+                 ->join('users', 'users.id = products.user_id')
+                 ->where(array('users.id' => $user_id));
         return $this->db->get()->result_array();
     }
 
