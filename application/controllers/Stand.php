@@ -75,4 +75,15 @@ class Stand extends CI_Controller {
         $this->load->view('templates/footer_navbar');
         $this->load->view('templates/footer');
     }
+
+    public function search() {
+        $query = $this->input->post('search-input');
+        $data['users'] = $this->UserModel->search($query);     
+        $data['pagination'] = null;
+
+		$this->load->view('templates/header', $data);
+        $this->load->view('stand/stand', $data);
+        $this->load->view('templates/footer_navbar');
+        $this->load->view('templates/footer');
+    }
 }
